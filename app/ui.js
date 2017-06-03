@@ -173,12 +173,12 @@ const UI = {
         UI.initSetting('encrypt', (window.location.protocol === "https:"));
         UI.initSetting('cursor', !isTouchDevice);
         UI.initSetting('clip', false);
-        UI.initSetting('resize', 'off');
+        UI.initSetting('resize', 'scale');
         UI.initSetting('shared', true);
         UI.initSetting('view_only', false);
         UI.initSetting('path', 'websockify');
         UI.initSetting('repeaterID', '');
-        UI.initSetting('reconnect', false);
+        UI.initSetting('reconnect', true);
         UI.initSetting('reconnect_delay', 5000);
 
         UI.setupSettingLabels();
