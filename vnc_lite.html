@@ -74,9 +74,8 @@
             if (WebUtil.getConfigVar('resize', false)) {
                 var innerW = window.innerWidth;
                 var innerH = window.innerHeight;
-                var controlbarH = document.getElementById('noVNC_status_bar').offsetHeight;
                 if (innerW !== undefined && innerH !== undefined)
-                    rfb.requestDesktopSize(innerW, innerH - controlbarH);
+                    rfb.get_display().autoscale(innerW, innerH, false);
             }
         }
         function FBUComplete(rfb, fbu) {
@@ -268,7 +267,7 @@
 
 <body style="margin: 0px;">
     <div id="noVNC_container">
-            <div id="noVNC_status_bar" class="noVNC_status_bar" style="margin-top: 0px;">
+            <div id="noVNC_status_bar" class="noVNC_status_bar" style="margin-top: 0px; display:none">
                 <table border=0 width="100%"><tr>
                     <td><div id="noVNC_status" style="position: relative; height: auto;">
                         Loading
